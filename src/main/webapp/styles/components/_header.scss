@@ -1,0 +1,12 @@
+.header {
+  padding: 15px 0;
+  background: $bg-color;
+  color: #ffffff;
+  &__text {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

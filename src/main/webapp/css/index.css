@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.flex {
+  display: flex; }
+
+.header {
+  padding: 15px 0;
+  background: teal;
+  color: #ffffff; }
+  .header__text {
+    margin-right: 15px; }
+    .header__text:last-child {
+      margin-right: 0; }
+
+#graph-plate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1em; }
+
+#graph {
+  height: 20em; }
+  #graph .graph-shape {
+    fill: #0ac4a2;
+    fill-opacity: 85%; }
+  #graph .graph-axle-text,
+  #graph .graph-axle-arrow,
+  #graph .graph-label {
+    fill: #000000; }
+  #graph .graph-axle-line,
+  #graph .graph-axle-arrow,
+  #graph .graph-point {
+    stroke: #000000; }
+  #graph .dotted-line-x,
+  #graph .dotted-line-y,
+  #graph .dotted-raw-x,
+  #graph .dotted-raw-y {
+    stroke: #000000;
+    stroke-dasharray: 5; }
+  #graph .dotted-raw-x,
+  #graph .dotted-raw-y {
+    stroke-width: 2px;
+    stroke: #d02424; }
+  #graph .crossing {
+    fill: #d02424; }
+
+.line {
+  stroke: transparent; }
+  .line.active {
+    stroke: red;
+    stroke-width: 1px; }
+  .line.pointer {
+    stroke: black;
+    stroke-width: 1px; }
+
+.inactive {
+  display: none; }
+
+#y-line {
+  stroke: transparent; }
+  #y-line.active {
+    stroke: red; }
+
+.history {
+  overflow-y: scroll;
+  height: 505px;
+  border: 1px solid teal;
+  box-sizing: content-box; }
+  .history::-webkit-scrollbar {
+    display: none; }
+  .history thead th {
+    position: sticky;
+    top: 0; }
+  .history table {
+    border-collapse: collapse;
+    width: 100%; }
+  .history th,
+  .history td {
+    padding: 10px; }
+  .history th {
+    background: teal;
+    color: #ffffff; }
+
+.main {
+  margin-top: 20px; }
+
+.form {
+  max-width: 457px; }
+  .form__title {
+    margin-right: 20px;
+    white-space: nowrap; }
+  .form__btns {
+    margin-top: 20px; }
+  .form #submit {
+    border: 1px solid transparent;
+    padding: 12px 40px;
+    font-size: 16px;
+    background-color: teal;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s all;
+    backface-visibility: hidden; }
+    .form #submit.wrong {
+      animation: wrong-animation 0.5s;
+      background: #ce1515; }
+    .form #submit:active {
+      padding: 11px 39px;
+      box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); }
+
+.X-panel__label {
+  margin-right: 10px;
+  position: relative; }
+  .X-panel__label .circle {
+    left: 4px;
+    top: 4px;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid teal;
+    transition: 0.3s; }
+  .X-panel__label input[type="radio"] {
+    opacity: 0; }
+    .X-panel__label input[type="radio"]:last-child {
+      margin-right: 0; }
+    .X-panel__label input[type="radio"]:checked ~ .circle {
+      background: teal; }
+
+.Y-panel {
+  margin: 20px 0; }
+
+#y-data {
+  width: 100%;
+  padding: 5px; }
+  #y-data:focus {
+    border: 2px solid teal;
+    outline-color: teal; }
+
+@keyframes wrong-animation {
+  0% {
+    transform: translateX(0); }
+  25% {
+    transform: translateX(20px); }
+  50% {
+    transform: translateX(-20px); }
+  75% {
+    transform: translateX(20px); }
+  100% {
+    transform: translateX(-20px); } }
+
+.R-select {
+  background-color: teal;
+  border-radius: 3px;
+  color: white;
+  padding: 5px;
+  border: none;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  outline: none; }
+  .R-select option {
+    padding: 30px; }
+
+.popup {
+  background: white;
+  padding: 25px;
+  color: red;
+  border: 1px solid red;
+  position: fixed;
+  left: 0;
+  top: 48px; }
+  .popup__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 5px;
+    cursor: pointer;
+    font-size: 30px; }
+  .popup.disabled {
+    display: none; }
+
+/*# sourceMappingURL=../../../../target/index.css.map */

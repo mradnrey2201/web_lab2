@@ -1,0 +1,20 @@
+.popup {
+  background: white;
+  padding: 25px;
+  color: red;
+  border: 1px solid red;
+  position: fixed;
+  left: 0;
+  top: 48px;
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 5px;
+    cursor: pointer;
+    font-size: 30px;
+  }
+  &.disabled {
+    display: none;
+  }
+}

@@ -1,0 +1,152 @@
+.form {
+  max-width: 457px;
+
+  &__title {
+    margin-right: 20px;
+    white-space: nowrap;
+  }
+
+  &__btns {
+    margin-top: 20px;
+  }
+
+  #submit {
+    border: 1px solid transparent;
+    padding: 12px 40px;
+    font-size: 16px;
+    background-color: $bg-color;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s all;
+
+    &.wrong {
+      animation: wrong-animation 0.5s;
+      background: rgb(206, 21, 21);
+    }
+
+    // &.wrong ~ &:hover{
+
+    // }
+    &:hover {
+      // background: transparent;
+      // color: teal;
+      // border-color: teal;
+    }
+
+    backface-visibility: hidden;
+
+    &:active {
+      padding: 11px 39px;
+      box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    }
+  }
+}
+
+.X-panel {
+  &__label {
+    margin-right: 10px;
+    position: relative;
+
+    .circle {
+      left: 4px;
+      top: 4px;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 2px solid $bg-color;
+      transition: 0.3s;
+    }
+
+    input[type="radio"] {
+      opacity: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:checked ~ .circle {
+        background: $bg-color;
+      }
+    }
+  }
+}
+
+.Y-panel {
+  margin: 20px 0;
+}
+
+//.R-panel {
+//  &__label {
+//    // margin-right: 10px;
+//    position: relative;
+//    margin-right: 10px;
+//
+//    .circle {
+//      left: 4px;
+//      top: 4px;
+//      position: absolute;
+//      width: 10px;
+//      height: 10px;
+//      border-radius: 50%;
+//      border: 2px solid $bg-color;
+//      transition: 0.3s;
+//    }
+//
+//    input {
+//      opacity: 0;
+//
+//      &:checked ~ .circle {
+//        background: $bg-color;
+//      }
+//    }
+//  }
+//}
+
+#y-data {
+  width: 100%;
+  padding: 5px;
+  // outline-color: teal;
+  &:focus {
+    border: 2px solid teal;
+    outline-color: teal;
+  }
+}
+
+@keyframes wrong-animation {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  75% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+
+.R-select {
+  background-color: $bg-color;
+  border-radius: 3px;
+  color: white;
+  padding: 5px;
+  border: none;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  outline: none;
+
+  option {
+    padding: 30px;
+  }
+}
+
+
+
